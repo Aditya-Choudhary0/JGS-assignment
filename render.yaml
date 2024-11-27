@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: frontend
+    env: node
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    startCommand: npm run start
+    branch: main
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://backend-service-name.onrender.com/api
+    autoDeploy: true
+    rootDir: frontend
+
+  - type: web
+    name: backend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    branch: main
+    envVars:
+      - key: MONGO_URI
+        value: mongodb://localhost:27017/orders
+      - key: PORT
+        value: 5000
+    autoDeploy: true
+    rootDir: backend
