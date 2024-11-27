@@ -1,0 +1,40 @@
+# Node modules directory
+node_modules/
+
+# npm log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment files (sensitive data)
+.env
+.env.local
+.env.*.local
+
+# Build directories
+dist/
+build/
+
+# Optional: VS Code workspace settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# IDE files
+.idea/
+
+# Coverage directory from testing
+coverage/
+
+# Dependencies and package manager files
+package-lock.json
+yarn.lock
+
+# Test or temporary files
+test/
+tmp/
